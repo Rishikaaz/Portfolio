@@ -1,53 +1,27 @@
-# Rishika Patel - Cybersecurity Portfolio
+# Rishika Patel | Cybersecurity Analyst & Researcher
 
-A professional, high-performance portfolio website built with **Next.js**, **React**, and **Framer Motion**. Designed for a modern, sleek aesthetic with a focus on cybersecurity and offensive security research.
+## 👋 About Me
+Hello! I'm Rishika, a Computer Science student at **Vellore Institute of Technology (VIT), Bhopal** (Class of 2027), with a deep passion for securing the digital landscape. My work sits at the intersection of **offensive security** and **proactive research**, focusing on building and protecting scalable digital infrastructures.
 
-## 🚀 Features
+## 🛡️ Areas of Expertise
+- **Offensive Security**: Exploring vulnerabilities before they can be exploited.
+- **Vulnerability Assessment**: Identifying and mitigating security risks across platforms.
+- **Malware Analysis**: Dissecting threats to understand and neutralize their impact.
+- **Full-Stack Security**: Engineering secure-by-design applications from the ground up.
 
-- **Modern UI/UX**: Fluid animations and a premium "glassmorphism" aesthetic.
-- **Interactive Background**: Dynamic particle constellation effect using HTML5 Canvas.
-- **Responsive Design**: Fully optimized for mobile, tablet, and desktop screens.
-- **Sectioned Layout**: Includes About, Experience, Skills, Education, Achievements, and Contact.
-- **Micro-animations**: Subtle hover effects and scroll-reveal animations for enhanced engagement.
+## 🌟 Roles & Impact
+- **Mentorship**: Dedicated to guiding others in tech and security.
+- **Leadership**: Serving as a **Patriotic Youth Ambassador**, focusing on community impact and empowerment.
+- **Open Source**: Active contributor to projects that enhance digital security and developer tools.
 
-## 🛠️ Tech Stack
-
-- **Framework**: [Next.js](https://nextjs.org/) (App Router)
-- **Styling**: Vanilla CSS with CSS variables for global design tokens.
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Language**: TypeScript
-
-## 📂 Project Structure
-
-- `src/app`: Next.js core application and global styles.
-- `src/components`: Reusable UI components (Hero, About, Projects, etc.).
-- `public`: Static assets including images and downloads.
-
-## 🛠️ Setup & Local Development
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/Rishikaaz/Portfolio.git
-   cd Portfolio
-   ```
-
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-
-3. **Run the development server**:
-   ```bash
-   npm run dev
-   ```
-   Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## 👤 About the Author
-
-**Rishika Patel**  
-Cybersecurity Analyst | CS Student at VIT Bhopal (2023–2027)  
-Specializing in offensive security, vulnerability assessment, and malware analysis.
+## 🎯 Current Focus
+I am currently refining my skills in deep-dive malware analysis and auditing complex codebases to find edge-case vulnerabilities. I believe in a future where digital safety is a foundational right, and I'm building it one secure line of code at a time.
 
 ---
-Built with ❤️ by [Rishika Patel](https://github.com/Rishikaaz)
+
+### Connect with me:
+- **GitHub**: [github.com/Rishikaaz](https://github.com/Rishikaaz)
+- **LinkedIn**: [Rishika Patel](https://www.linkedin.com/in/rishika-patel-a2ba5832a/) *(Add your actual link if different)*
+
+---
+*"Secure the digital. Build the future."*
