@@ -8,7 +8,7 @@ const Education = () => {
       title: "B.Tech in Computer Science and Engineering",
       company: "Vellore Institute of Technology, Bhopal",
       date: "2023 – 2027",
-      desc: ["CGPA: 8.76/10"]
+      desc: ["CGPA: 8.79/10"]
     },
     {
       title: "Senior Secondary (XII), ICSE",
@@ -20,7 +20,7 @@ const Education = () => {
       title: "High School (X), CBSE",
       company: "St. Xavier’s Senior Secondary School, Gonda",
       date: "2020",
-      desc: ["Percentage: 93.6%"]
+      desc: ["Percentage: 91.4%"]
     }
   ];
 
