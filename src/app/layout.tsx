@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import React from "react";
 import "./globals.css";
+import { Analytics } from '@vercel/analytics/next';
 
 import ParticleBackground from "../components/ParticleBackground";
 
@@ -27,6 +28,7 @@ export default function RootLayout({
             <body>
                 <ParticleBackground />
                 {children}
+                <Analytics />
             </body>
         </html>
     );
