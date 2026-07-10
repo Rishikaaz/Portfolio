@@ -6,21 +6,19 @@ const Experience = () => {
 
   const experience = [
     {
-      title: "Cyber Security Intern",
+      title: "Cyber Security and Ethical Hacking Intern",
       company: "Tamizhan Skills",
-      date: "Jun 2025 – Jul 2025",
+      date: "Jun – Jul 2025 (Remote)",
       desc: [
-        "Gained hands-on experience in ethical hacking and vulnerability assessment.",
-        "Worked with industry-standard security tools."
+        "Applied practical ethical hacking techniques to simulate real-world attacks and recommend remediation strategies."
       ]
     },
     {
-      title: "AI Technologies Intern",
-      company: "Edunet Foundations",
-      date: "Jun 2025 – Jul 2025",
+      title: "Green Skills with AI Technologies Intern",
+      company: "Edunet Foundation",
+      date: "Jun – Jul 2025 (Remote)",
       desc: [
-        "Explored Green Skills combined with Artificial Intelligence technologies.",
-        "Worked on a Carbon Emission Project using ML to predict greenhouse gases."
+        "Evaluated AI-driven solutions for optimizing environmental data analysis and reporting."
       ]
     }
   ];

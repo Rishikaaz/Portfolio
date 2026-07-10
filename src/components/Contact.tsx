@@ -20,7 +20,7 @@ const Contact = () => {
           Whether you have a question or just want to say hi, I'll try my best to get back to you!
         </p>
         <motion.a
-          href="mailto:riku192004@gmail.com"
+          href="mailto:rishika.patel2419@gmail.com"
           className="email-link"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -33,7 +33,7 @@ const Contact = () => {
             { icon: <Github size={24} />, url: "https://github.com/Rishikaaz" },
             { icon: <Linkedin size={24} />, url: "https://www.linkedin.com/in/rishika-patel-854ba5289" },
             { icon: <Instagram size={24} />, url: "https://www.instagram.com/rishikaaz19/" },
-            { icon: <Mail size={24} />, url: "mailto:riku192004@gmail.com" }
+            { icon: <Mail size={24} />, url: "mailto:rishika.patel2419@gmail.com" }
           ].map((social, i) => (
             <motion.a
               key={i}

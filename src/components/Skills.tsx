@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { Shield, Code, Microscope, Database } from 'lucide-react';
+import { Shield, Code, Microscope, Cloud } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Skills = () => {
@@ -8,22 +8,22 @@ const Skills = () => {
     {
       title: "Languages",
       icon: <Code size={20} />,
-      skills: ["C / C++", "Python", "Java", "JavaScript", "SQL", "Bash"]
+      skills: ["C++", "Bash Scripting", "C", "C#", "Python", "SQL"]
     },
     {
       title: "Security Tools",
       icon: <Shield size={20} />,
-      skills: ["Burp Suite", "Wireshark", "Nmap", "Metasploit", "Nessus", "Hashcat"]
+      skills: ["BurpSuite", "Wireshark", "Nmap", "Metasploit", "Nessus", "Kali", "Hashcat", "Splunk", "Ghidra"]
     },
     {
-      title: "Web & DB",
-      icon: <Database size={20} />,
-      skills: ["Node.js", "React.js", "Express.js", "Bootstrap", "Tailwind CSS", "HTML / CSS", "MySQL"]
+      title: "Cloud & Tech",
+      icon: <Cloud size={20} />,
+      skills: ["AWS (EC2, Lambda, S3)", "Blockchain", "Linux", "Docker", "ELK Stack"]
     },
     {
-      title: "Security & Other",
+      title: "Specialized",
       icon: <Microscope size={20} />,
-      skills: ["Reverse Engineering", "Malware Analysis", "Computer Networks", "OWASP", "AWS (EC2, Lambda, S3)", "Blockchain"]
+      skills: ["Reverse Engineering", "Malware Analysis", "Computer Networks", "OWASP", "OSI Model"]
     }
   ];
 

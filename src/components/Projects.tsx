@@ -5,30 +5,23 @@ import { motion } from 'framer-motion';
 
 const Projects = () => {
   const projects = [
-
     {
-      title: "Campus Course Records Manager (CCRM)",
-      desc: "A scalable Java-based system for managing student records and grading with robust file-based persistence.",
-      tech: ["Java", "OOP", "File I/O", "Data Structures"],
-      github: "https://github.com/Rishikaaz/Campus-Course-Records-Manager-CCRM-"
+      title: "Containerized HIDS & SIEM Pipeline",
+      desc: "Architected a containerized SIEM using Docker Compose to orchestrate decoupled ELK microservices, optimizing host CPU/RAM overhead. Developed a Python HIDS sensor via Scapy to capture network traffic, stream JSON alerts, and validate rules with simulated reconnaissance attacks.",
+      tech: ["Python", "Docker", "ELK stack", "Scapy", "Nmap"],
+      github: "https://github.com/Rishikaaz"
+    },
+    {
+      title: "Carbon-Emission-Prediction",
+      desc: "Developed a predictive model using Python and Scikit-learn to forecast CO2 emissions based on industrial activity. Performed feature engineering and data normalization, achieving high predictive accuracy for sustainability reporting.",
+      tech: ["Python", "Scikit-learn", "Data Normalization"],
+      github: "https://github.com/Rishikaaz/Carbon-Emission-Prediction"
     },
     {
       title: "WiFi Network Scanner & Monitor",
       desc: "A cross-platform security utility for real-time network discovery and vulnerability assessment.",
       tech: ["Python", "Flask", "Networking", "Monitoring"],
       github: "https://github.com/Rishikaaz/Wifi-Network-Scanner"
-    },
-    {
-      title: "Carbon Emission Predictive Analytics",
-      desc: "A machine learning solution for analyzing climate datasets to forecast greenhouse gas emissions.",
-      tech: ["Python", "ML", "Scikit-learn", "Data Analysis"],
-      github: "https://github.com/Rishikaaz/Carbon-Emission-Prediction"
-    },
-    {
-      title: "Dynamic Dummy Data Generator",
-      desc: "A MERN-based utility for automating the generation of large-scale test datasets for development.",
-      tech: ["Node.js", "Express.js", "MongoDB", "NoSQL"],
-      github: "https://github.com/Rishikaaz/Dummy-Data-Generator"
     }
   ];
 

@@ -57,7 +57,7 @@ const Navbar = () => {
                             transition={{ duration: 0.5, delay: navLinks.length * 0.1 }}
                         >
                             <a
-                                href="https://docs.google.com/document/d/1XeDTPIM08sjIVBfRfKTDrlayo3pEhwm3fQmBC_mUTJk/edit?usp=sharing"
+                                href="/Rishika-Patel_Resume.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="resume-button"
@@ -95,7 +95,7 @@ const Navbar = () => {
                     ))}
                     <li>
                         <a
-                            href="https://docs.google.com/document/d/1XeDTPIM08sjIVBfRfKTDrlayo3pEhwm3fQmBC_mUTJk/edit?usp=sharing"
+                            href="/Rishika-Patel_Resume.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="resume-button"

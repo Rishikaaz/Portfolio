@@ -38,8 +38,8 @@ const SocialSidebars = () => {
                 transition={{ duration: 0.5, delay: 1 }}
             >
                 <div className="side-list">
-                    <a href="mailto:riku192004@gmail.com" className="email-link-side">
-                        riku192004@gmail.com
+                    <a href="mailto:rishika.patel2419@gmail.com" className="email-link-side">
+                        rishika.patel2419@gmail.com
                     </a>
                 </div>
             </motion.div>

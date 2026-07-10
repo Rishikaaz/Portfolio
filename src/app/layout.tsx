@@ -6,7 +6,7 @@ import ParticleBackground from "../components/ParticleBackground";
 
 export const metadata: Metadata = {
     title: "Rishika Patel | Cybersecurity Enthusiast",
-    description: "I'm a cybersecurity enthusiast and student at VIT Bhopal, passionate about protecting the digital world.",
+    description: "Computer Science student specializing in Cybersecurity and Ethical Hacking with expertise in Vulnerability Assessment, Penetration Testing, and Malware Analysis.",
     icons: {
         icon: "/ME.png",
     }

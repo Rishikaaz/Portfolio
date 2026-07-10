@@ -10,12 +10,11 @@ const About = () => {
       <div className="inner">
         <div className="about-text">
           <p>
-            Hello! I'm Rishika, a CS student at <strong>Vellore Institute of Technology, Bhopal</strong> (2023–2027).
-            I specialize in offensive security and full-stack development, focusing on protecting digital infrastructures through proactive research.
+            Hello! I'm Rishika, a Computer Science student at <strong>Vellore Institute of Technology, Bhopal</strong> (2023–ongoing) specializing in Cybersecurity and Ethical Hacking.
           </p>
           <p>
-            My expertise includes <strong>Vulnerability Assessment</strong> and <strong>Malware Analysis</strong>.
-            When I'm not auditing code, I'm contributing to open-source or mentoring as a <strong>Patriotic Youth Ambassador</strong>.
+            I possess proven expertise in <strong>Vulnerability Assessment</strong>, <strong>Penetration Testing</strong>, and <strong>Malware Analysis</strong>. 
+            I love building secure containerized environments, analyzing threat vectors, and active problem solving.
           </p>
         </div>
         <div className="about-pic">

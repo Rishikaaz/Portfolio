@@ -7,26 +7,18 @@ const Achievements = () => {
 
   const certifications = [
     "Blockchain and its Applications (NPTEL, IIT Kharagpur)",
-    "Networking Basics (CISCO)",
-    "Introduction to Cybersecurity (CISCO)",
-    "Cyber Threat Management (CISCO)",
     "The Bits and Bytes of Computer Networking (Coursera)",
-    "Basics of HTML and CSS (OpenWeaver)",
-    "Mastercard Cybersecurity Job Simulation (Forage)",
-    "Deloitte Australia Cyber Job Simulation (Forage)",
-    "Fundamentals of AI and ML (Vityarthi)",
-    "Python Essentials & Java Programming (Vityarthi)",
-    "MATLAB Onramp"
+    "Networking Basics & Cyber Threat Management (CISCO)",
+    "AWS Cloud Practitioner & AWS Skill Builder",
+    "Cybersecurity Job Simulation (Mastercard & Deloitte)"
   ];
 
   const accomplishments = [
-    { text: "Ranked 355th out of 5,947 in Industrial-Intrusion CTF (TryHackMe)", icon: <Trophy size={18} /> },
-    { text: "7th rank in Shell n'Zen CTF", icon: <Award size={18} /> },
-    { text: "Top 2% global ranking on TryHackMe", icon: <Trophy size={18} /> },
-    { text: "FOSS Contributor in Social Summer of Code - Season 4", icon: <Award size={18} /> },
-    { text: "Participated in Flipkart Runway Season 5, TATA Crucible, and HP Power Lab", icon: <Star size={18} /> },
-    { text: "Patriotic Youth Ambassador (VPRF)", icon: <Award size={18} /> },
-    { text: "Tree Plantation Volunteer (NSS)", icon: <Star size={18} /> }
+    { text: "Solved 270+ LeetCode problems and actively competed in Codeforces contests with an 853 contest rating.", icon: <Trophy size={18} /> },
+    { text: "Selected for the DSCI Cyber For Her Hackathon and the APCSIP-2026 program for a Cyber Cell internship.", icon: <Award size={18} /> },
+    { text: "Ranked in the top 2% globally on TryHackMe with a 177-day learning streak in penetration testing and digital forensics.", icon: <Trophy size={18} /> },
+    { text: "Placed 355th out of 5,947 global competitors in the TryHackMe Industrial-Intrusion CTF.", icon: <Trophy size={18} /> },
+    { text: "Secured 7th rank nationally in the Shell n’Zen CTF, solving complex web security and reverse engineering challenges.", icon: <Award size={18} /> }
   ];
 
   return (

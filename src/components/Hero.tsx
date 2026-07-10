@@ -18,9 +18,7 @@ const Hero = () => {
           <h1 className="hero-name">Rishika Patel.</h1>
           <h2 className="hero-tagline">Secure the digital. Build the future.</h2>
           <p className="hero-desc">
-            I'm a <strong>Cybersecurity Analyst</strong> studying at
-            VIT Bhopal. I specialize in offensive security, vulnerability assessment, and malware analysis,
-            focusing on engineering secure, scalable digital infrastructures.
+            I'm a <strong>Computer Science student</strong> at VIT Bhopal specializing in <strong>Cybersecurity and Ethical Hacking</strong>. I possess expertise in Vulnerability Assessment, Penetration Testing, and Malware Analysis, with a passion for designing secure and resilient digital systems.
           </p>
           <div className="hero-cta">
             <a href="#contact" className="cta-btn">

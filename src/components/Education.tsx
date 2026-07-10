@@ -7,8 +7,8 @@ const Education = () => {
     {
       title: "B.Tech in Computer Science and Engineering",
       company: "Vellore Institute of Technology, Bhopal",
-      date: "2023 – 2027",
-      desc: ["CGPA: 8.79/10"]
+      date: "2023 – ongoing",
+      desc: ["CGPA: 8.84/10"]
     },
     {
       title: "Senior Secondary (XII), ICSE",
