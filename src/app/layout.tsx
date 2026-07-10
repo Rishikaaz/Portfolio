@@ -3,6 +3,7 @@ import React from "react";
 import "./globals.css";
 
 import ParticleBackground from "../components/ParticleBackground";
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
     title: "Rishika Patel | Cybersecurity Enthusiast",
@@ -27,6 +28,7 @@ export default function RootLayout({
             <body>
                 <ParticleBackground />
                 {children}
+                <Analytics />
             </body>
         </html>
     );
