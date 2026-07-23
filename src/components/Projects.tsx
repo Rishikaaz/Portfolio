@@ -12,6 +12,12 @@ const Projects = () => {
       github: "https://github.com/Rishikaaz"
     },
     {
+      title: "Vulnerability Management Platform",
+      desc: "Unified Security Assessment Framework integrating multi-phase reconnaissance, service detection, and vulnerability auditing into structured reporting.",
+      tech: ["Python", "SQL", "Ethical-Hacking","SIEM","Automated-Penetration-Testing", "Security Framework"],
+      github: "https://github.com/Rishikaaz/Vulnerability-Management-Platform"
+    },
+    {
       title: "Carbon-Emission-Prediction",
       desc: "Developed a predictive model using Python and Scikit-learn to forecast CO2 emissions based on industrial activity. Performed feature engineering and data normalization, achieving high predictive accuracy for sustainability reporting.",
       tech: ["Python", "Scikit-learn", "Data Normalization"],
