@@ -14,8 +14,8 @@ const Achievements = () => {
   ];
 
   const accomplishments = [
-    { text: "Solved 270+ LeetCode problems and actively competed in Codeforces contests with an 853 contest rating.", icon: <Trophy size={18} /> },
-    { text: "Selected for the DSCI Cyber For Her Hackathon and the APCSIP-2026 program for a Cyber Cell internship.", icon: <Award size={18} /> },
+    { text: "Solved 300+ LeetCode problems and actively competed in Codeforces contests with a 852 contest rating.", icon: <Trophy size={18} /> },
+    { text: "Selected for the DSCI Cyber For Her Hackathon, qualified for Round 2 of Scripted By{Her} 2.0 Meesho Hackathon, and the APCSIP-2026 program for a Cyber Cell internship.", icon: <Award size={18} /> },
     { text: "Ranked in the top 2% globally on TryHackMe with a 177-day learning streak in penetration testing and digital forensics.", icon: <Trophy size={18} /> },
     { text: "Placed 355th out of 5,947 global competitors in the TryHackMe Industrial-Intrusion CTF.", icon: <Trophy size={18} /> },
     { text: "Secured 7th rank nationally in the Shell n’Zen CTF, solving complex web security and reverse engineering challenges.", icon: <Award size={18} /> }
