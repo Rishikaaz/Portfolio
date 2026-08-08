@@ -1,29 +1,39 @@
 "use client";
 import React from 'react';
-import { Shield, Code, Microscope, Cloud } from 'lucide-react';
+import { Shield, Code, Cloud, Network, Terminal, Cpu } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Languages",
+      title: "Programming & Languages",
       icon: <Code size={20} />,
-      skills: ["C++", "Bash Scripting", "C", "C#", "Python", "SQL"]
+      skills: ["C++", "Python", "Bash Scripting", "C", "C#", "SQL", "React.js", "TypeScript"]
     },
     {
-      title: "Security Tools",
+      title: "Backend & System Design",
+      icon: <Cpu size={20} />,
+      skills: ["Microservices Architecture", "Distributed Systems", "Multithreading", "Scalable System Design", "Object-Oriented Programming (OOP)", "Data Structures & Algorithms", "System Optimization"]
+    },
+    {
+      title: "Security & Ethical Hacking",
       icon: <Shield size={20} />,
-      skills: ["BurpSuite", "Wireshark", "Nmap", "Metasploit", "Nessus", "Kali", "Hashcat", "Splunk", "Ghidra"]
+      skills: ["Vulnerability Assessment & Penetration Testing (VAPT)", "Reverse Engineering", "Malware Analysis", "Threat Detection", "Web Security (OWASP Top 10)", "Network Reconnaissance", "Secure Coding"]
     },
     {
-      title: "Cloud & Tech",
+      title: "Security Tools & Frameworks",
+      icon: <Terminal size={20} />,
+      skills: ["BurpSuite", "Wireshark", "Nmap", "Metasploit", "Nessus", "Splunk", "Ghidra", "Scapy", "Kali Linux", "Hashcat"]
+    },
+    {
+      title: "Cloud, DevOps & Infrastructure",
       icon: <Cloud size={20} />,
-      skills: ["AWS (EC2, Lambda, S3)", "Blockchain", "Linux", "Docker", "ELK Stack"]
+      skills: ["AWS (EC2, S3, IAM, VPC)", "Docker & Docker Compose", "CI/CD Fundamentals", "Containerization", "Linux Administration", "Server Management", "ELK Stack"]
     },
     {
-      title: "Specialized",
-      icon: <Microscope size={20} />,
-      skills: ["Reverse Engineering", "Malware Analysis", "Computer Networks", "OWASP", "OSI Model"]
+      title: "Networking & Protocols",
+      icon: <Network size={20} />,
+      skills: ["TCP/IP", "OSI Model", "Socket Programming", "Network Traffic Analysis", "Packet Capture", "Network Protocols"]
     }
   ];
 

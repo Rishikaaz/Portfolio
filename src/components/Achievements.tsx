@@ -6,16 +6,17 @@ import { motion } from 'framer-motion';
 const Achievements = () => {
 
   const certifications = [
+    "Certified Cybersecurity Educator Professional (CCEP)",
     "Blockchain and its Applications (NPTEL, IIT Kharagpur)",
-    "The Bits and Bytes of Computer Networking (Coursera)",
     "Networking Basics & Cyber Threat Management (CISCO)",
+    "The Bits and Bytes of Computer Networking (Coursera)",
     "AWS Cloud Practitioner & AWS Skill Builder",
     "Cybersecurity Job Simulation (Mastercard & Deloitte)"
   ];
 
   const accomplishments = [
-    { text: "Solved 300+ LeetCode problems and actively competed in Codeforces contests with a 852 contest rating.", icon: <Trophy size={18} /> },
-    { text: "Selected for the DSCI Cyber For Her Hackathon, qualified for Round 2 of Scripted By{Her} 2.0 Meesho Hackathon, and the APCSIP-2026 program for a Cyber Cell internship.", icon: <Award size={18} /> },
+    { text: "Solved 300+ LeetCode problems and actively competed in Codeforces contests with a max of 902 contest rating.", icon: <Trophy size={18} /> },
+    { text: "Selected for the DSCI Cyber For Her Hackathon, qualified for Round 2 of Scripted By{Her} 2.0, Meesho Hackathon as well as in Honeywell and the APCSIP-2026 for a Cyber Cell internship.", icon: <Award size={18} /> },
     { text: "Ranked in the top 2% globally on TryHackMe with a 177-day learning streak in penetration testing and digital forensics.", icon: <Trophy size={18} /> },
     { text: "Placed 355th out of 5,947 global competitors in the TryHackMe Industrial-Intrusion CTF.", icon: <Trophy size={18} /> },
     { text: "Secured 7th rank nationally in the Shell n’Zen CTF, solving complex web security and reverse engineering challenges.", icon: <Award size={18} /> }

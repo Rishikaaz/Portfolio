@@ -10,11 +10,10 @@ const About = () => {
       <div className="inner">
         <div className="about-text">
           <p>
-            Hello! I'm Rishika, a Computer Science student at <strong>Vellore Institute of Technology, Bhopal</strong> (2023–ongoing) specializing in Cybersecurity and Ethical Hacking.
+            Hello! I'm Rishika, a Computer Science student at <strong>Vellore Institute of Technology, Bhopal</strong> (2023–2027) specializing in Cybersecurity, Ethical Hacking, and Scalable Backend Development.
           </p>
           <p>
-            I possess proven expertise in <strong>Vulnerability Assessment</strong>, <strong>Penetration Testing</strong>, and <strong>Malware Analysis</strong>. 
-            I love building secure containerized environments, analyzing threat vectors, and active problem solving.
+            I bring together expertise in <strong>Vulnerability Assessment & Penetration Testing (VAPT)</strong>, <strong>Malware Analysis</strong>, and <strong>Scalable System Design</strong>. Whether orchestrating containerized SIEM architectures using the ELK Stack, engineering predictive AI data pipelines, or designing microservices, I focus on building secure, resilient, and high-performance software.
           </p>
         </div>
         <div className="about-pic">

@@ -7,27 +7,31 @@ const Projects = () => {
   const projects = [
     {
       title: "Containerized HIDS & SIEM Pipeline",
-      desc: "Architected a containerized SIEM using Docker Compose to orchestrate decoupled ELK microservices, optimizing host CPU/RAM overhead. Developed a Python HIDS sensor via Scapy to capture network traffic, stream JSON alerts, and validate rules with simulated reconnaissance attacks.",
-      tech: ["Python", "Docker", "ELK stack", "Scapy", "Nmap"],
+      date: "May 2026",
+      desc: "Spearheaded a containerized SIEM architecture using Docker Compose, optimizing host CPU/RAM overhead by reducing resource consumption by 40% through strategic VM migration. Developed a high-throughput Python HIDS sensor via Scapy to capture live traffic and stream real-time JSON alert logs over TCP.",
+      tech: ["Python", "Docker", "ELK stack", "Scapy", "Linux Shell Scripting"],
       github: "https://github.com/Rishikaaz"
     },
     {
       title: "Vulnerability Management Platform",
-      desc: "Unified Security Assessment Framework integrating multi-phase reconnaissance, service detection, and vulnerability auditing into structured reporting.",
-      tech: ["Python", "SQL", "Ethical-Hacking","SIEM","Automated-Penetration-Testing", "Security Framework"],
+      date: "Jul 2026",
+      desc: "Engineered a modular vulnerability management platform in Python automating network reconnaissance, asynchronous port scanning, CVE signature matching, and HTTP header auditing. Integrated SQLite database schemas to track, correlate, and index system vulnerabilities over time, cutting manual reporting effort by 50%.",
+      tech: ["Python", "SQLite", "Network Security", "Socket Programming"],
       github: "https://github.com/Rishikaaz/Vulnerability-Management-Platform"
     },
     {
-      title: "Carbon-Emission-Prediction",
-      desc: "Developed a predictive model using Python and Scikit-learn to forecast CO2 emissions based on industrial activity. Performed feature engineering and data normalization, achieving high predictive accuracy for sustainability reporting.",
-      tech: ["Python", "Scikit-learn", "Data Normalization"],
-      github: "https://github.com/Rishikaaz/Carbon-Emission-Prediction"
+      title: "AI-Powered Behavioral Anomaly Detection",
+      date: "Jul 2026",
+      desc: "Designed an end-to-end threat detection pipeline capturing raw network packets using Scapy, converting them into behavioral features for unsupervised ML models (Isolation Forest, Autoencoders). Trained on baseline traffic to spot zero-day anomalies and streamed JSON alert logs into SIEM workflows, cutting false positives by 60%.",
+      tech: ["Python", "Scikit-learn", "Pandas", "Scapy", "Networking"],
+      github: "https://github.com/Rishikaaz"
     },
     {
-      title: "WiFi Network Scanner & Monitor",
-      desc: "A cross-platform security utility for real-time network discovery and vulnerability assessment.",
-      tech: ["Python", "Flask", "Networking", "Monitoring"],
-      github: "https://github.com/Rishikaaz/Wifi-Network-Scanner"
+      title: "Carbon-Emission-Prediction & Data Pipeline",
+      date: "Jun – Jul 2025",
+      desc: "Built a predictive data pipeline using Python and Scikit-learn to forecast environmental metrics from industrial datasets. Implemented feature engineering, data normalization pipelines, and visualization modules to convert software logs into actionable analytical insights.",
+      tech: ["Python", "Scikit-learn", "Pandas", "NumPy", "Data Pipelines"],
+      github: "https://github.com/Rishikaaz/Carbon-Emission-Prediction"
     }
   ];
 
@@ -59,6 +63,7 @@ const Projects = () => {
                     <Folder size={40} />
                   </div>
                   <div className="project-links">
+                    {project.date && <span className="project-date">{project.date}</span>}
                     <a href={project.github} target="_blank" rel="noopener noreferrer">
                       <Github size={20} />
                     </a>
@@ -131,6 +136,13 @@ const Projects = () => {
           display: flex;
           align-items: center;
           color: var(--light-slate);
+        }
+        .project-date {
+          font-family: var(--font-mono);
+          font-size: var(--fz-xs);
+          color: var(--accent);
+          opacity: 0.85;
+          margin-right: 12px;
         }
         .project-links a {
           padding: 10px;

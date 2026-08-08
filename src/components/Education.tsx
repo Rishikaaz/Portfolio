@@ -7,20 +7,20 @@ const Education = () => {
     {
       title: "B.Tech in Computer Science and Engineering",
       company: "Vellore Institute of Technology, Bhopal",
-      date: "2023 – ongoing",
-      desc: ["CGPA: 8.84/10"]
+      date: "2023 – 2027",
+      desc: ["CGPA: 8.84/10", "Bhopal, India"]
     },
     {
       title: "Senior Secondary (XII), ICSE",
-      company: "St. Xavier’s Convent School, Lucknow",
+      company: "St. Xavier’s Convent School",
       date: "2022",
-      desc: ["Percentage: 78%"]
+      desc: ["Lucknow, India"]
     },
     {
       title: "High School (X), CBSE",
-      company: "St. Xavier’s Senior Secondary School, Gonda",
+      company: "St. Xavier’s Senior Secondary School",
       date: "2020",
-      desc: ["Percentage: 91.4%"]
+      desc: ["Percentage: 91.4%", "Gonda, India"]
     }
   ];
 
