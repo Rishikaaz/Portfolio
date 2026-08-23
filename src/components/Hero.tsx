@@ -18,7 +18,7 @@ const Hero = () => {
           <h1 className="hero-name">Rishika Patel.</h1>
           <h2 className="hero-tagline">Secure the digital. Build the future.</h2>
           <p className="hero-desc">
-            Computer Science undergraduate with solid foundations in DSA, network protocols, and AWS, proficient in Python, C++, Docker, and the ELK Stack, with practical experience building containerized SIEM pipelines, AI threat detection models, and vulnerability platforms, combining 400+ solved algorithmic problems with proven security credentials including a Top 2% TryHackMe ranking, CTF wins, hackathons, and OpenBugBounty disclosures.
+            Computer Science undergraduate with solid foundations in DSA, OOPs, network protocols, and AWS, proficient in Python, C++, Docker, and the ELK Stack, with practical experience building containerized SIEM pipelines, AI threat detection models, and vulnerability platforms, combining 400+ solved algorithmic problems with proven security credentials including a Top 2% TryHackMe ranking, CTF wins, hackathons, and OpenBugBounty disclosures.
           </p>
           <div className="hero-cta">
             <a href="#contact" className="cta-btn">
