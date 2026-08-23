@@ -1,10 +1,9 @@
 "use client";
 import React, { useState } from 'react';
-import { Github, Linkedin, Code2, Shield, Mail, Copy, Check, Send } from 'lucide-react';
+import { Github, Linkedin, Code2, Shield, Mail, Send } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
-  const [copied, setCopied] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -12,98 +11,31 @@ const Contact = () => {
     message: ''
   });
 
-  const email = "rishika.patel2419@gmail.com";
-
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText(email);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const mailtoSubject = encodeURIComponent(formData.subject || "Security Consultation / Inquiry");
     const mailtoBody = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-    window.location.href = `mailto:${email}?subject=${mailtoSubject}&body=${mailtoBody}`;
+    window.location.href = `mailto:rishika.patel2419@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
   };
 
   return (
     <section id="contact" className="section contact-section">
-      <div className="section-header-line">
-        <span className="section-header-tag">// GET IN TOUCH</span>
-        <div className="header-line"></div>
-      </div>
+      <motion.div
+        className="container"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        <p className="overline">What's Next?</p>
+        <h2 className="title">Get In Touch</h2>
+        <p className="desc">
+          I'm currently looking for new opportunities in Cybersecurity and Ethical Hacking.
+          Whether you have a question, a security project, or just want to say hi, my inbox is always open!
+        </p>
 
-      <div className="contact-grid">
-        {/* Left Column */}
-        <motion.div
-          className="contact-info"
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="status-badge">
-            <span className="status-dot"></span>
-            Available for new opportunities
-          </div>
-
-          <h2 className="contact-title">Let's secure the future together.</h2>
-
-          <p className="contact-desc">
-            Have a project in mind or looking for a security audit? Feel free to reach out. I'm always open to discussing new ideas, finding vulnerabilities, and building secure systems.
-          </p>
-
-          <div className="email-box">
-            <div className="email-icon">
-              <Mail size={20} />
-            </div>
-            <div className="email-content">
-              <span className="email-label">Email Address</span>
-              <span className="email-value">{email}</span>
-            </div>
-            <button
-              onClick={handleCopyEmail}
-              className="copy-btn"
-              title="Copy Email"
-              type="button"
-            >
-              {copied ? <Check size={18} className="copied-icon" /> : <Copy size={18} />}
-            </button>
-          </div>
-
-          <div className="social-links-container">
-            <span className="social-label">Connect via</span>
-            <div className="social-links">
-              {[
-                { icon: <Github size={20} />, url: "https://github.com/Rishikaaz", label: "GitHub" },
-                { icon: <Linkedin size={20} />, url: "https://linkedin.com/in/rishika-patel", label: "LinkedIn" },
-                { icon: <Code2 size={20} />, url: "https://leetcode.com/rishikaaz19", label: "LeetCode" },
-                { icon: <Shield size={20} />, url: "https://tryhackme.com/p/Rishikaaz19", label: "TryHackMe" }
-              ].map((social, i) => (
-                <a
-                  key={i}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.label}
-                  className="social-icon-btn"
-                >
-                  {social.icon}
-                </a>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Right Column - Form */}
-        <motion.div
-          className="contact-form-card"
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
+        {/* Contact Form Card */}
+        <div className="contact-card">
           <form onSubmit={handleSubmit} className="contact-form">
             <div className="form-row">
               <div className="form-group">
@@ -112,7 +44,7 @@ const Contact = () => {
                   type="text"
                   id="name"
                   required
-                  placeholder="John Doe"
+                  placeholder="Your Name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 />
@@ -123,7 +55,7 @@ const Contact = () => {
                   type="email"
                   id="email"
                   required
-                  placeholder="john@example.com"
+                  placeholder="your.email@example.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 />
@@ -136,7 +68,7 @@ const Contact = () => {
                 type="text"
                 id="subject"
                 required
-                placeholder="Project Inquiry / Security Audit"
+                placeholder="Subject"
                 value={formData.subject}
                 onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
               />
@@ -148,7 +80,7 @@ const Contact = () => {
                 id="message"
                 rows={5}
                 required
-                placeholder="Tell me about your project..."
+                placeholder="Write your message here..."
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               ></textarea>
@@ -156,184 +88,82 @@ const Contact = () => {
 
             <button type="submit" className="submit-btn">
               <Send size={16} />
-              SEND MESSAGE
+              Send Message
             </button>
           </form>
-        </motion.div>
-      </div>
+        </div>
+
+        <div className="social-links">
+          {[
+            { icon: <Github size={22} />, url: "https://github.com/Rishikaaz", label: "GitHub" },
+            { icon: <Linkedin size={22} />, url: "https://linkedin.com/in/rishika-patel", label: "LinkedIn" },
+            { icon: <Code2 size={22} />, url: "https://leetcode.com/rishikaaz19", label: "LeetCode" },
+            { icon: <Shield size={22} />, url: "https://tryhackme.com/p/Rishikaaz19", label: "TryHackMe" },
+            { icon: <Mail size={22} />, url: "mailto:rishika.patel2419@gmail.com", label: "Email" }
+          ].map((social, i) => (
+            <motion.a
+              key={i}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={social.label}
+              whileHover={{ y: -4, color: 'var(--accent)' }}
+            >
+              {social.icon}
+            </motion.a>
+          ))}
+        </div>
+      </motion.div>
 
       <style jsx>{`
         .contact-section {
-          max-width: 1100px;
-          margin: 0 auto 120px;
+          text-align: center;
+          max-width: 680px;
+          margin: 0 auto 100px;
         }
-        .section-header-line {
-          display: flex;
-          align-items: center;
-          gap: 20px;
-          margin-bottom: 50px;
-        }
-        .section-header-tag {
-          font-family: var(--font-mono);
-          color: var(--accent);
-          font-size: var(--fz-md);
-          letter-spacing: 1.5px;
-          font-weight: 600;
-          white-space: nowrap;
-        }
-        .header-line {
-          height: 1px;
-          width: 100%;
-          background: linear-gradient(90deg, rgba(255,255,255,0.15) 0%, transparent 100%);
-        }
-        .contact-grid {
-          display: grid;
-          grid-template-columns: 1fr 1.1fr;
-          gap: 50px;
-          align-items: start;
-        }
-        @media (max-width: 900px) {
-          .contact-grid {
-            grid-template-columns: 1fr;
-            gap: 40px;
-          }
-        }
-        .status-badge {
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-          padding: 6px 14px;
-          border-radius: 20px;
-          background: rgba(100, 255, 218, 0.1);
-          border: 1px solid rgba(100, 255, 218, 0.3);
-          color: var(--accent);
-          font-family: var(--font-mono);
-          font-size: var(--fz-xs);
-          margin-bottom: 25px;
-        }
-        .status-dot {
-          width: 8px;
-          height: 8px;
-          border-radius: 50%;
-          background-color: var(--accent);
-          box-shadow: 0 0 10px var(--accent);
-        }
-        .contact-title {
-          font-size: clamp(28px, 4vw, 42px);
-          color: var(--lightest-slate);
-          line-height: 1.2;
+        .overline {
+          display: block;
           margin-bottom: 20px;
-          font-weight: 700;
-        }
-        .contact-desc {
-          color: var(--slate);
-          font-size: var(--fz-lg);
-          line-height: 1.6;
-          margin-bottom: 35px;
-        }
-        .email-box {
-          display: flex;
-          align-items: center;
-          gap: 15px;
-          background-color: var(--accent-box);
-          border: 1px solid rgba(255, 255, 255, 0.1);
-          padding: 16px 20px;
-          border-radius: 10px;
-          margin-bottom: 30px;
-          transition: var(--transition);
-        }
-        .email-box:hover {
-          border-color: var(--accent);
-        }
-        .email-icon {
           color: var(--accent);
-        }
-        .email-content {
-          display: flex;
-          flex-direction: column;
-          flex: 1;
-        }
-        .email-label {
           font-family: var(--font-mono);
-          font-size: var(--fz-xxs);
-          color: var(--light-slate);
-          opacity: 0.7;
-          margin-bottom: 2px;
+          font-size: var(--fz-md);
+          font-weight: 400;
         }
-        .email-value {
-          font-family: var(--font-mono);
-          font-size: var(--fz-sm);
+        .title {
+          font-size: clamp(40px, 5vw, 60px);
+          margin-bottom: 10px;
           color: var(--lightest-slate);
-          word-break: break-all;
         }
-        .copy-btn {
-          background: transparent;
-          border: none;
-          color: var(--light-slate);
-          cursor: pointer;
-          padding: 8px;
-          border-radius: 6px;
-          transition: var(--transition);
-          display: flex;
-          align-items: center;
-          justify-content: center;
+        .desc {
+          margin-bottom: 40px;
+          font-size: var(--fz-lg);
+          color: var(--slate);
+          line-height: 1.5;
         }
-        .copy-btn:hover {
-          color: var(--accent);
-          background-color: rgba(255, 255, 255, 0.05);
-        }
-        .copied-icon {
-          color: var(--accent);
-        }
-        .social-links-container {
-          display: flex;
-          flex-direction: column;
-          gap: 12px;
-        }
-        .social-label {
-          font-family: var(--font-mono);
-          font-size: var(--fz-xs);
-          color: var(--light-slate);
-        }
-        .social-links {
-          display: flex;
-          gap: 15px;
-        }
-        .social-icon-btn {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 42px;
-          height: 42px;
-          border-radius: 8px;
-          background: var(--accent-box);
-          border: 1px solid rgba(255, 255, 255, 0.1);
-          color: var(--light-slate);
-          transition: var(--transition);
-        }
-        .social-icon-btn:hover {
-          color: var(--accent);
-          border-color: var(--accent);
-          transform: translateY(-3px);
-        }
-        .contact-form-card {
+        .contact-card {
           background-color: var(--accent-box);
           border: 1px solid rgba(255, 255, 255, 0.1);
-          border-radius: 14px;
+          border-radius: 12px;
           padding: 35px;
           box-shadow: var(--card-shadow);
+          text-align: left;
+          margin-bottom: 50px;
+          transition: var(--transition);
+        }
+        .contact-card:hover {
+          border-color: rgba(100, 255, 218, 0.3);
         }
         .contact-form {
           display: flex;
           flex-direction: column;
-          gap: 22px;
+          gap: 20px;
         }
         .form-row {
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 20px;
         }
-        @media (max-width: 600px) {
+        @media (max-width: 550px) {
           .form-row {
             grid-template-columns: 1fr;
           }
@@ -380,12 +210,10 @@ const Contact = () => {
           background: transparent;
           color: var(--accent);
           border: 1px solid var(--accent);
-          border-radius: 8px;
-          padding: 14px 20px;
+          border-radius: var(--border-radius);
+          padding: 1rem 1.75rem;
           font-family: var(--font-mono);
           font-size: var(--fz-sm);
-          font-weight: 500;
-          letter-spacing: 1px;
           cursor: pointer;
           transition: var(--transition);
           margin-top: 10px;
@@ -393,6 +221,18 @@ const Contact = () => {
         .submit-btn:hover {
           background-color: var(--accent-tint);
           transform: translateY(-2px);
+        }
+        .social-links {
+          display: flex;
+          justify-content: center;
+          gap: 25px;
+        }
+        .social-links a {
+          color: var(--light-slate);
+          transition: var(--transition);
+        }
+        .social-links a:hover {
+          color: var(--accent);
         }
       `}</style>
     </section>
