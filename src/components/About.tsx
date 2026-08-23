@@ -1,6 +1,5 @@
 "use client";
 import React from 'react';
-import Image from 'next/image';
 
 const About = () => {
 
@@ -16,66 +15,17 @@ const About = () => {
             I bring together solid foundations in <strong>Data Structures & Algorithms (DSA)</strong>, <strong>Object-Oriented Programming (OOPs)</strong>, and <strong>Vulnerability Assessment & Penetration Testing (VAPT)</strong>. Whether orchestrating containerized SIEM architectures using the ELK Stack, developing HIDS security sensors, or engineering AI threat detection models, I focus on building secure and resilient software.
           </p>
         </div>
-        <div className="about-pic">
-          <div className="wrapper">
-            <Image
-              src="/ME.png"
-              alt="Rishika Patel"
-              width={300}
-              height={300}
-              className="img"
-            />
-          </div>
-        </div>
       </div>
 
       <style jsx>{`
         .inner {
-          display: grid;
-          grid-template-columns: 3fr 2fr;
-          gap: 50px;
-        }
-        @media (max-width: 768px) {
-          .inner {
-            display: block;
-          }
+          display: block;
+          max-width: 800px;
         }
         .about-text p {
           margin-bottom: 20px;
           font-size: var(--fz-lg);
-        }
-        .about-pic {
-          position: relative;
-          max-width: 300px;
-        }
-        @media (max-width: 768px) {
-          .about-pic {
-            margin: 50px auto 0;
-            width: 70%;
-          }
-        }
-        .wrapper {
-          display: block;
-          position: relative;
-          width: 100%;
-          border-radius: var(--border-radius);
-          background-color: var(--accent);
-        }
-        .wrapper:hover {
-          background-color: transparent;
-        }
-        .wrapper:hover .img {
-          filter: none;
-          mix-blend-mode: normal;
-        }
-        .img {
-          position: relative;
-          border-radius: var(--border-radius);
-          mix-blend-mode: multiply;
-          filter: grayscale(100%) contrast(1);
-          transition: var(--transition);
-          width: 100%;
-          height: auto;
+          line-height: 1.6;
         }
       `}</style>
     </section>
