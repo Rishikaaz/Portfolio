@@ -6,6 +6,15 @@ const Experience = () => {
 
   const experience = [
     {
+      title: "Security Researcher",
+      company: "Open Bug Bounty (Freelance)",
+      date: "Aug 2026 – Present | Remote",
+      desc: [
+        "Identified and responsibly disclosed web application security vulnerabilities including Cross-Site Scripting (XSS).",
+        "Awarded the Fastest Fix Badge on Open Bug Bounty after vendor remediation within 24 hours."
+      ]
+    },
+    {
       title: "Cyber Security Intern",
       company: "Tamizhan Skills",
       date: "Jun 2025 – Jul 2025 | Remote",
