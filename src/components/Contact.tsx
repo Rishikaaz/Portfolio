@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import { Github, Linkedin, Code2, Shield, Mail, Send } from 'lucide-react';
+import { Github, Linkedin, Code2, Shield, Instagram, Mail, Send } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
@@ -99,6 +99,7 @@ const Contact = () => {
             { icon: <Linkedin size={22} />, url: "https://linkedin.com/in/rishika-patel", label: "LinkedIn" },
             { icon: <Code2 size={22} />, url: "https://leetcode.com/rishikaaz19", label: "LeetCode" },
             { icon: <Shield size={22} />, url: "https://tryhackme.com/p/Rishikaaz19", label: "TryHackMe" },
+            { icon: <Instagram size={22} />, url: "https://www.instagram.com/rishikaaz19/", label: "Instagram" },
             { icon: <Mail size={22} />, url: "mailto:rishika.patel2419@gmail.com", label: "Email" }
           ].map((social, i) => (
             <motion.a

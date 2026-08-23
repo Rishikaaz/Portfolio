@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { Github, Linkedin, Code2, Shield } from 'lucide-react';
+import { Github, Linkedin, Code2, Shield, Instagram } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const SocialSidebars = () => {
@@ -31,6 +31,11 @@ const SocialSidebars = () => {
                     <li>
                         <a href="https://tryhackme.com/p/Rishikaaz19" target="_blank" rel="noreferrer" aria-label="TryHackMe">
                             <Shield size={20} />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/rishikaaz19/" target="_blank" rel="noreferrer" aria-label="Instagram">
+                            <Instagram size={20} />
                         </a>
                     </li>
                 </ul>
