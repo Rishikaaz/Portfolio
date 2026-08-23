@@ -18,7 +18,7 @@ const Hero = () => {
           <h1 className="hero-name">Rishika Patel.</h1>
           <h2 className="hero-tagline">Secure the digital. Build the future.</h2>
           <p className="hero-desc">
-            Computer Science student specializing in <strong>Cybersecurity & Digital Forensics</strong>. Building containerized SIEM pipelines, AI threat detection models, and security tooling with strong foundations in DSA & OOPs.
+            Securing digital ecosystems through offense-informed defense, AI threat detection, and containerized SIEM architectures. Powered by deep algorithmic problem-solving and a relentless passion for ethical hacking.
           </p>
           <div className="hero-cta">
             <a href="#contact" className="cta-btn">
