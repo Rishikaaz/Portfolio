@@ -15,9 +15,10 @@ const Achievements = () => {
   ];
 
   const accomplishments = [
-    { text: "Solved 300+ LeetCode problems and actively competed in Codeforces contests with a max of 902 contest rating.", icon: <Trophy size={18} /> },
-    { text: "Selected for the DSCI Cyber For Her Hackathon, qualified for Round 2 of Scripted By{Her} 2.0, Meesho Hackathon as well as in Honeywell and the APCSIP-2026 for a Cyber Cell internship.", icon: <Award size={18} /> },
-    { text: "Ranked in the top 2% globally on TryHackMe with a 177-day learning streak in penetration testing and digital forensics.", icon: <Trophy size={18} /> },
+    { text: "Solved 400+ LeetCode problems and actively competed in Codeforces contests with a max of 902 contest rating.", icon: <Trophy size={18} /> },
+    { text: "Selected for the DSCI Cyber For Her Hackathon, qualified for Round 2 of Scripted By{Her} 2.0, Meesho Hackathon as well as in Honeywell and got an offer letter from APCSIP-2026 for a Cyber Cell internship.", icon: <Award size={18} /> },
+    { text: "Identified and responsibly disclosed a Cross-Site Scripting (XSS) vulnerability via OpenBugBounty, earning the Fastest Fix Badge after remediation within 24 hours.", icon: <Award size={18} /> },
+    { text: "Ranked in the top 2% globally on TryHackMe with the longest 177-day learning streak.", icon: <Trophy size={18} /> },
     { text: "Placed 355th out of 5,947 global competitors in the TryHackMe Industrial-Intrusion CTF.", icon: <Trophy size={18} /> },
     { text: "Secured 7th rank nationally in the Shell n’Zen CTF, solving complex web security and reverse engineering challenges.", icon: <Award size={18} /> }
   ];

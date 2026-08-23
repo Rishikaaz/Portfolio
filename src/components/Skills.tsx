@@ -6,34 +6,29 @@ import { motion } from 'framer-motion';
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Programming & Languages",
+      title: "Languages",
       icon: <Code size={20} />,
-      skills: ["C++", "Python", "Bash Scripting", "C", "C#", "SQL", "React.js", "TypeScript"]
+      skills: ["C++", "Python", "SQL", "Bash Scripting", "JavaScript", "HTML", "CSS"]
     },
     {
-      title: "Backend & System Design",
+      title: "Tools & Frameworks",
+      icon: <Terminal size={20} />,
+      skills: ["Docker", "Git", "GitHub", "BurpSuite", "Wireshark", "Nmap", "Metasploit", "Nessus", "Splunk", "Ghidra", "Scapy", "Kali Linux"]
+    },
+    {
+      title: "Cloud & Infrastructure",
+      icon: <Cloud size={20} />,
+      skills: ["AWS (EC2, S3, IAM, VPC)", "ELK Stack", "CI/CD Fundamentals", "Containerization"]
+    },
+    {
+      title: "Core Concepts & Networking",
       icon: <Cpu size={20} />,
-      skills: ["Microservices Architecture", "Distributed Systems", "Multithreading", "Scalable System Design", "Object-Oriented Programming (OOP)", "Data Structures & Algorithms", "System Optimization"]
+      skills: ["Data Structures & Algorithms (DSA)", "Object-Oriented Programming (OOPs)", "Operating System (OS)", "TCP/IP", "Socket Programming", "Network Protocols", "Secure Coding", "System Optimization"]
     },
     {
       title: "Security & Ethical Hacking",
       icon: <Shield size={20} />,
-      skills: ["Vulnerability Assessment & Penetration Testing (VAPT)", "Reverse Engineering", "Malware Analysis", "Threat Detection", "Web Security (OWASP Top 10)", "Network Reconnaissance", "Secure Coding"]
-    },
-    {
-      title: "Security Tools & Frameworks",
-      icon: <Terminal size={20} />,
-      skills: ["BurpSuite", "Wireshark", "Nmap", "Metasploit", "Nessus", "Splunk", "Ghidra", "Scapy", "Kali Linux", "Hashcat"]
-    },
-    {
-      title: "Cloud, DevOps & Infrastructure",
-      icon: <Cloud size={20} />,
-      skills: ["AWS (EC2, S3, IAM, VPC)", "Docker & Docker Compose", "CI/CD Fundamentals", "Containerization", "Linux Administration", "Server Management", "ELK Stack"]
-    },
-    {
-      title: "Networking & Protocols",
-      icon: <Network size={20} />,
-      skills: ["TCP/IP", "OSI Model", "Socket Programming", "Network Traffic Analysis", "Packet Capture", "Network Protocols"]
+      skills: ["Computer Networking", "Vulnerability Assessment & Penetration Testing (VAPT)", "Reverse Engineering", "Malware Analysis", "Threat Detection", "Web Security", "OWASP Top 10"]
     }
   ];
 

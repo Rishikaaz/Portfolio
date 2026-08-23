@@ -7,31 +7,32 @@ const Projects = () => {
   const projects = [
     {
       title: "Containerized HIDS & SIEM Pipeline",
-      date: "May 2026",
-      desc: "Spearheaded a containerized SIEM architecture using Docker Compose, optimizing host CPU/RAM overhead by reducing resource consumption by 40% through strategic VM migration. Developed a high-throughput Python HIDS sensor via Scapy to capture live traffic and stream real-time JSON alert logs over TCP.",
-      tech: ["Python", "Docker", "ELK stack", "Scapy", "Linux Shell Scripting"],
+      desc: [
+        "Spearheaded a containerized SIEM architecture using Docker Compose, optimizing host CPU/RAM overhead by reducing resource consumption by 40% through strategic VM migration.",
+        "Developed a high-throughput Python HIDS sensor using Scapy to capture live traffic and stream real-time JSON alerts over TCP."
+      ],
+      tech: ["Python", "Docker", "ELK Stack", "Scapy", "Linux", "Nmap"],
       github: "https://github.com/Rishikaaz"
     },
     {
       title: "Vulnerability Management Platform",
-      date: "Jul 2026",
-      desc: "Engineered a modular vulnerability management platform in Python automating network reconnaissance, asynchronous port scanning, CVE signature matching, and HTTP header auditing. Integrated SQLite database schemas to track, correlate, and index system vulnerabilities over time, cutting manual reporting effort by 50%.",
+      desc: [
+        "Engineered a modular vulnerability management platform in Python automating network reconnaissance, asynchronous port scanning, CVE signature matching, and HTTP header auditing.",
+        "Integrated SQLite database schemas to track, correlate, and index system vulnerabilities over time, cutting manual reporting effort by 50%.",
+        "Enhanced an automated security reporting engine that aggregates structured database findings into executive-level vulnerability assessment reports."
+      ],
       tech: ["Python", "SQLite", "Network Security", "Socket Programming"],
       github: "https://github.com/Rishikaaz/Vulnerability-Management-Platform"
     },
     {
       title: "AI-Powered Behavioral Anomaly Detection",
-      date: "Jul 2026",
-      desc: "Designed an end-to-end threat detection pipeline capturing raw network packets using Scapy, converting them into behavioral features for unsupervised ML models (Isolation Forest, Autoencoders). Trained on baseline traffic to spot zero-day anomalies and streamed JSON alert logs into SIEM workflows, cutting false positives by 60%.",
-      tech: ["Python", "Scikit-learn", "Pandas", "Scapy", "Networking"],
+      desc: [
+        "Built an end-to-end threat detection pipeline that captures raw network packets using Scapy, converts them into behavioral features, and passes them to unsupervised models.",
+        "Trained the system on baseline network traffic to identify subtle zero-day anomalies and multi-stage attack patterns that traditional signature-based rules miss.",
+        "Streamed real-time JSON alert logs directly into SIEM workflows, cutting down false positives and enabling immediate incident response by 60%."
+      ],
+      tech: ["Python", "Scikit-learn", "Scapy", "Networking"],
       github: "https://github.com/Rishikaaz"
-    },
-    {
-      title: "Carbon-Emission-Prediction & Data Pipeline",
-      date: "Jun – Jul 2025",
-      desc: "Built a predictive data pipeline using Python and Scikit-learn to forecast environmental metrics from industrial datasets. Implemented feature engineering, data normalization pipelines, and visualization modules to convert software logs into actionable analytical insights.",
-      tech: ["Python", "Scikit-learn", "Pandas", "NumPy", "Data Pipelines"],
-      github: "https://github.com/Rishikaaz/Carbon-Emission-Prediction"
     }
   ];
 
@@ -63,7 +64,6 @@ const Projects = () => {
                     <Folder size={40} />
                   </div>
                   <div className="project-links">
-                    {project.date && <span className="project-date">{project.date}</span>}
                     <a href={project.github} target="_blank" rel="noopener noreferrer">
                       <Github size={20} />
                     </a>
@@ -71,7 +71,15 @@ const Projects = () => {
                 </div>
                 <h3 className="project-title">{project.title}</h3>
                 <div className="project-description">
-                  <p>{project.desc}</p>
+                  {Array.isArray(project.desc) ? (
+                    <ul className="project-bullets">
+                      {project.desc.map((bullet, k) => (
+                        <li key={k}>{bullet}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p>{project.desc}</p>
+                  )}
                 </div>
               </header>
               <footer>
@@ -157,7 +165,24 @@ const Projects = () => {
         }
         .project-description {
           color: var(--light-slate);
-          font-size: var(--fz-lg);
+          font-size: var(--fz-md);
+        }
+        .project-bullets {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        .project-bullets li {
+          position: relative;
+          padding-left: 20px;
+          margin-bottom: 8px;
+          line-height: 1.5;
+        }
+        .project-bullets li:before {
+          content: "▹";
+          position: absolute;
+          left: 0;
+          color: var(--accent);
         }
         .project-tech-list {
           display: flex;
