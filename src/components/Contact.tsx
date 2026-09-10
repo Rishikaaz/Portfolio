@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import { Github, Linkedin, Code2, Shield, Instagram, Mail, Send } from 'lucide-react';
+import { Github, Linkedin, Code2, Shield, Instagram, Mail, Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
@@ -11,11 +11,44 @@ const Contact = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const mailtoSubject = encodeURIComponent(formData.subject || "Security Consultation / Inquiry");
-    const mailtoBody = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-    window.location.href = `mailto:rishika.patel2419@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+    setStatus('submitting');
+    setErrorMessage('');
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/rishika.patel2419@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          _subject: formData.subject || "Security Consultation / Inquiry",
+          message: formData.message,
+          _template: "table",
+          _captcha: "false"
+        })
+      });
+
+      const data = await response.json();
+
+      if (response.ok && (data.success === 'true' || data.success === true)) {
+        setStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setStatus('error');
+        setErrorMessage(data.message || 'Failed to send message. Please try again later.');
+      }
+    } catch (err) {
+      setStatus('error');
+      setErrorMessage('Network error. Please check your connection and try again.');
+    }
   };
 
   return (
@@ -36,61 +69,103 @@ const Contact = () => {
 
         {/* Contact Form Card */}
         <div className="contact-card">
-          <form onSubmit={handleSubmit} className="contact-form">
-            <div className="form-row">
+          {status === 'success' ? (
+            <motion.div
+              className="status-card success"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3 }}
+            >
+              <CheckCircle2 size={54} className="status-icon success-icon" />
+              <h3>Message Sent Successfully!</h3>
+              <p>
+                Thank you for getting in touch. Your message has been sent directly from the site and I will get back to you as soon as possible.
+              </p>
+              <button onClick={() => setStatus('idle')} className="reset-btn">
+                Send Another Message
+              </button>
+            </motion.div>
+          ) : (
+            <form onSubmit={handleSubmit} className="contact-form">
+              {status === 'error' && (
+                <div className="error-banner">
+                  <AlertCircle size={20} />
+                  <span>{errorMessage}</span>
+                </div>
+              )}
+
+              <div className="form-row">
+                <div className="form-group">
+                  <label htmlFor="name">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    required
+                    disabled={status === 'submitting'}
+                    placeholder="Your Name"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    required
+                    disabled={status === 'submitting'}
+                    placeholder="your.email@example.com"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  />
+                </div>
+              </div>
+
               <div className="form-group">
-                <label htmlFor="name">Name</label>
+                <label htmlFor="subject">Subject</label>
                 <input
                   type="text"
-                  id="name"
+                  id="subject"
                   required
-                  placeholder="Your Name"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  disabled={status === 'submitting'}
+                  placeholder="Subject"
+                  value={formData.subject}
+                  onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                 />
               </div>
+
               <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
+                <label htmlFor="message">Message</label>
+                <textarea
+                  id="message"
+                  rows={5}
                   required
-                  placeholder="your.email@example.com"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                />
+                  disabled={status === 'submitting'}
+                  placeholder="Write your message here..."
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                ></textarea>
               </div>
-            </div>
 
-            <div className="form-group">
-              <label htmlFor="subject">Subject</label>
-              <input
-                type="text"
-                id="subject"
-                required
-                placeholder="Subject"
-                value={formData.subject}
-                onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                rows={5}
-                required
-                placeholder="Write your message here..."
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              ></textarea>
-            </div>
-
-            <button type="submit" className="submit-btn">
-              <Send size={16} />
-              Send Message
-            </button>
-          </form>
+              <button
+                type="submit"
+                className="submit-btn"
+                disabled={status === 'submitting'}
+              >
+                {status === 'submitting' ? (
+                  <>
+                    <Loader2 size={18} className="spinner" />
+                    Sending Message...
+                  </>
+                ) : (
+                  <>
+                    <Send size={16} />
+                    Send Message
+                  </>
+                )}
+              </button>
+            </form>
+          )}
         </div>
 
         <div className="social-links">
@@ -202,6 +277,23 @@ const Contact = () => {
           border-color: var(--accent);
           box-shadow: 0 0 10px rgba(100, 255, 218, 0.15);
         }
+        .form-group input:disabled,
+        .form-group textarea:disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
+        }
+        .error-banner {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          background-color: rgba(255, 99, 99, 0.1);
+          border: 1px solid rgba(255, 99, 99, 0.3);
+          color: #ff6b6b;
+          padding: 12px 16px;
+          border-radius: 8px;
+          font-size: var(--fz-sm);
+          font-family: var(--font-mono);
+        }
         .submit-btn {
           display: flex;
           align-items: center;
@@ -219,9 +311,61 @@ const Contact = () => {
           transition: var(--transition);
           margin-top: 10px;
         }
-        .submit-btn:hover {
+        .submit-btn:hover:not(:disabled) {
           background-color: var(--accent-tint);
           transform: translateY(-2px);
+        }
+        .submit-btn:disabled {
+          opacity: 0.7;
+          cursor: not-allowed;
+        }
+        .status-card {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          padding: 20px 10px;
+        }
+        .status-icon.success-icon {
+          color: var(--accent);
+          margin-bottom: 16px;
+        }
+        .status-card h3 {
+          font-size: 22px;
+          color: var(--lightest-slate);
+          margin-bottom: 12px;
+        }
+        .status-card p {
+          color: var(--slate);
+          font-size: var(--fz-md);
+          line-height: 1.6;
+          margin-bottom: 24px;
+          max-width: 460px;
+        }
+        .reset-btn {
+          background: transparent;
+          color: var(--accent);
+          border: 1px solid var(--accent);
+          border-radius: var(--border-radius);
+          padding: 0.75rem 1.5rem;
+          font-family: var(--font-mono);
+          font-size: var(--fz-xs);
+          cursor: pointer;
+          transition: var(--transition);
+        }
+        .reset-btn:hover {
+          background-color: var(--accent-tint);
+        }
+        .spinner {
+          animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
         }
         .social-links {
           display: flex;
