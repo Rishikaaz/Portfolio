@@ -71,6 +71,12 @@ const Certifications = () => {
       date: "Apr 2025"
     },
     {
+      name: "Introduction to Cybersecurity",
+      issuer: "Cisco Networking Academy",
+      image: "/certifications/cisco_intro_cyber.png",
+      date: "Jun 2024"
+    },
+    {
       name: "Cyber Job Simulation",
       issuer: "Deloitte & Forage",
       image: "/certifications/deloitte_cyber.png",
