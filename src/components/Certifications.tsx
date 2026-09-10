@@ -112,7 +112,13 @@ const Certifications = () => {
             viewport={{ once: true }}
             whileHover={{ y: -6 }}
             transition={{ duration: 0.3, delay: i * 0.08 }}
-            onClick={() => setSelectedCert(cert)}
+            onClick={() => {
+              if (selectedCert?.name === cert.name) {
+                setSelectedCert(null);
+              } else {
+                setSelectedCert(cert);
+              }
+            }}
           >
             <div className="cert-card">
               {/* Image Preview or Icon Container */}
@@ -176,7 +182,7 @@ const Certifications = () => {
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.9, opacity: 0, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              onClick={(e) => e.stopPropagation()}
+              onClick={() => setSelectedCert(null)}
             >
               <button
                 className="close-btn"
@@ -192,6 +198,7 @@ const Certifications = () => {
                     src={selectedCert.image}
                     alt={selectedCert.name}
                     className="modal-img"
+                    onClick={() => setSelectedCert(null)}
                     onError={(e) => {
                       (e.target as HTMLElement).style.display = 'none';
                       const parent = (e.target as HTMLElement).parentElement;
@@ -210,7 +217,7 @@ const Certifications = () => {
                   <Award size={64} className="modal-icon" />
                 </div>
 
-                <div className="modal-details">
+                <div className="modal-details" onClick={(e) => e.stopPropagation()}>
                   <h3>{selectedCert.name}</h3>
                   <p className="modal-issuer">Issued by {selectedCert.issuer}</p>
 
@@ -220,6 +227,7 @@ const Certifications = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="credential-link"
+                      onClick={(e) => e.stopPropagation()}
                     >
                       Verify Credential <ExternalLink size={16} />
                     </a>
