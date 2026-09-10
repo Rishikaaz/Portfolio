@@ -34,6 +34,12 @@ const Certifications = () => {
       credentialUrl: "https://courses.redteamleaders.com/exam-completion/40053fb17b3f5b47"
     },
     {
+      name: "Blockchain and its Applications",
+      issuer: "NPTEL, IIT Kharagpur",
+      image: "/certifications/nptel_blockchain.png",
+      date: "Jan-Apr 2025"
+    },
+    {
       name: "The Bits and Bytes of Computer Networking",
       issuer: "Google & Coursera",
       image: "/certifications/coursera.png",
@@ -41,7 +47,7 @@ const Certifications = () => {
       credentialUrl: "https://coursera.org/verify/BP39Q643JKFZ"
     },
     {
-      name: "AWS Certified Cloud Practitioner - Practice Question Set",
+      name: "AWS Certified Cloud Practitioner",
       issuer: "Amazon Web Services",
       image: "/certifications/aws_practice.png",
       date: "Sep 2025"
@@ -53,22 +59,28 @@ const Certifications = () => {
       date: "Sep 2025"
     },
     {
-      name: "Blockchain and its Applications",
-      issuer: "NPTEL, IIT Kharagpur",
-      image: "/certifications/blockchain.png",
-      date: "2023"
+      name: "Cyber Threat Management",
+      issuer: "Cisco Networking Academy",
+      image: "/certifications/cisco_threat.png",
+      date: "Jul 2025"
     },
     {
-      name: "Networking Basics & Cyber Threat Management",
-      issuer: "CISCO",
-      image: "/certifications/cisco.png",
-      date: "2023"
+      name: "Networking Basics",
+      issuer: "Cisco Networking Academy",
+      image: "/certifications/cisco_networking.png",
+      date: "Apr 2025"
+    },
+    {
+      name: "Cyber Job Simulation",
+      issuer: "Deloitte & Forage",
+      image: "/certifications/deloitte_cyber.png",
+      date: "Jun 2025"
     },
     {
       name: "Cybersecurity Job Simulation",
-      issuer: "Mastercard & Deloitte",
-      image: "/certifications/deloitte.png",
-      date: "2024"
+      issuer: "Mastercard & Forage",
+      image: "/certifications/mastercard_cyber.png",
+      date: "May 2025"
     }
   ];
 
