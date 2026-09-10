@@ -33,6 +33,15 @@ const Projects = () => {
       ],
       tech: ["Python", "Scikit-learn", "Scapy", "Networking"],
       github: "https://github.com/Rishikaaz"
+    },
+    {
+      title: "Wi-Fi Network Scanner & Dashboard",
+      desc: [
+        "Developed a cross-platform (Windows & Linux) web application for scanning nearby Wi-Fi networks, analyzing signal strength, SSID parameters, and security protocols.",
+        "Integrated native netsh/nmcli system utilities with a Python Flask backend to stream real-time network telemetry, ping latency, and bandwidth performance."
+      ],
+      tech: ["Python", "Flask", "JavaScript", "HTML/CSS", "Linux", "Networking"],
+      github: "https://github.com/Rishikaaz/Wifi-Network-Scanner"
     }
   ];
 
