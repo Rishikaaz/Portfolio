@@ -1,4 +1,3 @@
-"use client";
 import React from 'react';
 import { Github, Linkedin, Code2, Shield, Instagram } from 'lucide-react';
 import { motion } from 'framer-motion';

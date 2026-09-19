@@ -1,4 +1,3 @@
-"use client";
 import React, { useState } from 'react';
 import { Github, Linkedin, Code2, Shield, Instagram, Mail, Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import { motion } from 'framer-motion';

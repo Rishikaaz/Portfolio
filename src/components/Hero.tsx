@@ -1,7 +1,5 @@
-"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import ParticleBackground from './ParticleBackground';
 
 const Hero = () => {
@@ -27,23 +25,17 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        <motion.div
-          className="hero-image"
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
+        <div className="hero-image">
           <div className="image-wrapper">
-            <Image
+            <img
               src="/ME.png"
               alt="Rishika Patel"
               width={280}
               height={330}
               className="img"
-              priority
             />
           </div>
-        </motion.div>
+        </div>
       </div>
 
       <style jsx>{`
@@ -128,25 +120,9 @@ const Hero = () => {
                     position: relative;
                     width: 280px;
                     height: 330px;
-                    background-color: var(--accent);
                     border-radius: var(--border-radius);
-                    transition: var(--transition);
-                }
-                .image-wrapper::before {
-                    content: "";
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    border: 2px solid var(--accent);
-                    top: 15px;
-                    left: 15px;
-                    border-radius: var(--border-radius);
-                    z-index: -1;
-                    transition: var(--transition);
-                }
-                .image-wrapper:hover::before {
-                    top: 10px;
-                    left: 10px;
+                    overflow: hidden;
+                    box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.5);
                 }
                 @media (max-width: 480px) {
                     .image-wrapper {
@@ -154,19 +130,10 @@ const Hero = () => {
                         height: 280px;
                     }
                 }
-                .image-wrapper:hover {
-                    background-color: transparent;
-                    box-shadow: 0 10px 30px -10px var(--accent-tint);
-                }
-                .image-wrapper:hover .img {
-                    filter: none;
-                    mix-blend-mode: normal;
-                }
                 .img {
+                    width: 100%;
+                    height: 100%;
                     border-radius: var(--border-radius);
-                    mix-blend-mode: multiply;
-                    filter: grayscale(100%) contrast(1.2);
-                    transition: var(--transition);
                     object-fit: cover;
                 }
             `}</style>

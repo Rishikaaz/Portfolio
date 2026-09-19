@@ -1,4 +1,3 @@
-"use client";
 import React from 'react';
 import { Shield, Code, Cloud, Network, Terminal, Cpu } from 'lucide-react';
 import { motion } from 'framer-motion';

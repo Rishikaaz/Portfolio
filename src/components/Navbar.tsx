@@ -1,6 +1,4 @@
-"use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const Navbar = () => {
@@ -35,7 +33,7 @@ const Navbar = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <Link href="/">Rishika Patel</Link>
+                    <a href="#">Rishika Patel</a>
                 </motion.div>
 
                 <div className="nav-links-desktop">
@@ -48,9 +46,9 @@ const Navbar = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: i * 0.1 }}
                             >
-                                <Link href={link.href} className="nav-link">
+                                <a href={link.href} className="nav-link">
                                     {link.name}
-                                </Link>
+                                </a>
                             </motion.li>
                         ))}
                         <motion.li
@@ -86,13 +84,13 @@ const Navbar = () => {
                 <ol className="mobile-nav-links">
                     {navLinks.map((link, i) => (
                         <li key={link.name}>
-                            <Link
+                            <a
                                 href={link.href}
                                 className="mobile-nav-link"
                                 onClick={() => setMobileMenuOpen(false)}
                             >
                                 {link.name}
-                            </Link>
+                            </a>
                         </li>
                     ))}
                     <li>
