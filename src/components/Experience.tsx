@@ -5,6 +5,16 @@ const Experience = () => {
 
   const experience = [
     {
+      title: "Software Engineering Intern",
+      company: "Skyy Tech LLC",
+      date: "Nov 2026 – Present | New York, US - Remote",
+      desc: [
+        "Contributing directly to SkyyLearn and other innovative products under development as part of collaborative product teams.",
+        "Working with engineering teams on real-world technical challenges involving modern technologies, AI integrations, and product development.",
+        "Participating in technical discussions, code reviews, standups, and product demonstrations."
+      ]
+    },
+    {
       title: "Security Researcher",
       company: "Open Bug Bounty (Freelance)",
       date: "Aug 2026 – Present | Remote",
