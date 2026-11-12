@@ -170,7 +170,7 @@ const Contact = () => {
         <div className="social-links">
           {[
             { icon: <Github size={22} />, url: "https://github.com/Rishikaaz", label: "GitHub" },
-            { icon: <Linkedin size={22} />, url: "https://linkedin.com/in/rishika-patel", label: "LinkedIn" },
+            { icon: <Linkedin size={22} />, url: "https://www.linkedin.com/in/rishika-patel-854ba5289/", label: "LinkedIn" },
             { icon: <Code2 size={22} />, url: "https://leetcode.com/rishikaaz19", label: "LeetCode" },
             { icon: <Shield size={22} />, url: "https://tryhackme.com/p/Rishikaaz19", label: "TryHackMe" },
             { icon: <Instagram size={22} />, url: "https://www.instagram.com/rishikaaz19/", label: "Instagram" },

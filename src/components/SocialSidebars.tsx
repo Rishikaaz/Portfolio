@@ -18,7 +18,7 @@ const SocialSidebars = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="https://linkedin.com/in/rishika-patel" target="_blank" rel="noreferrer" aria-label="Linkedin">
+                        <a href="https://www.linkedin.com/in/rishika-patel-854ba5289/" target="_blank" rel="noreferrer" aria-label="Linkedin">
                             <Linkedin size={20} />
                         </a>
                     </li>

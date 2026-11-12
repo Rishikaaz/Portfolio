@@ -21,7 +21,7 @@ I am currently refining my skills in deep-dive malware analysis and auditing com
 
 ### Connect with me:
 - **GitHub**: [github.com/Rishikaaz](https://github.com/Rishikaaz)
-- **LinkedIn**: [Rishika Patel](http://www.linkedin.com/in/rishika-patel-854ba5289)
+- **LinkedIn**: [Rishika Patel](https://www.linkedin.com/in/rishika-patel-854ba5289/)
 
 ---
 *"Secure the digital. Build the future."*
