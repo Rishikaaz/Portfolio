@@ -14,6 +14,7 @@ import SocialSidebars from './components/SocialSidebars';
 import BackgroundAnimations from './components/BackgroundAnimations';
 import ScrollProgress from './components/ScrollProgress';
 import ParticleBackground from './components/ParticleBackground';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
     return (
@@ -35,6 +36,7 @@ export default function App() {
                 <Contact />
             </main>
             <Footer />
+            <Analytics />
         </>
     );
 }
