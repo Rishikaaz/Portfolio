@@ -1,4 +1,3 @@
-"use client";
 import React from 'react';
 import { Folder, Github } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -7,20 +6,40 @@ const Projects = () => {
   const projects = [
     {
       title: "Containerized HIDS & SIEM Pipeline",
-      desc: "Architected a containerized SIEM using Docker Compose to orchestrate decoupled ELK microservices, optimizing host CPU/RAM overhead. Developed a Python HIDS sensor via Scapy to capture network traffic, stream JSON alerts, and validate rules with simulated reconnaissance attacks.",
-      tech: ["Python", "Docker", "ELK stack", "Scapy", "Nmap"],
+      desc: [
+        "Spearheaded a containerized SIEM architecture using Docker Compose, optimizing host CPU/RAM overhead by reducing resource consumption by 40% through strategic VM migration.",
+        "Developed a high-throughput Python HIDS sensor using Scapy to capture live traffic and stream real-time JSON alerts over TCP."
+      ],
+      tech: ["Python", "Docker", "ELK Stack", "Scapy", "Linux", "Nmap"],
       github: "https://github.com/Rishikaaz"
     },
     {
-      title: "Carbon-Emission-Prediction",
-      desc: "Developed a predictive model using Python and Scikit-learn to forecast CO2 emissions based on industrial activity. Performed feature engineering and data normalization, achieving high predictive accuracy for sustainability reporting.",
-      tech: ["Python", "Scikit-learn", "Data Normalization"],
-      github: "https://github.com/Rishikaaz/Carbon-Emission-Prediction"
+      title: "Vulnerability Management Platform",
+      desc: [
+        "Engineered a modular vulnerability management platform in Python automating network reconnaissance, asynchronous port scanning, CVE signature matching, and HTTP header auditing.",
+        "Integrated SQLite database schemas to track, correlate, and index system vulnerabilities over time, cutting manual reporting effort by 50%.",
+        "Enhanced an automated security reporting engine that aggregates structured database findings into executive-level vulnerability assessment reports."
+      ],
+      tech: ["Python", "SQLite", "Network Security", "Socket Programming"],
+      github: "https://github.com/Rishikaaz/Vulnerability-Management-Platform"
     },
     {
-      title: "WiFi Network Scanner & Monitor",
-      desc: "A cross-platform security utility for real-time network discovery and vulnerability assessment.",
-      tech: ["Python", "Flask", "Networking", "Monitoring"],
+      title: "AI-Powered Behavioral Anomaly Detection",
+      desc: [
+        "Built an end-to-end threat detection pipeline that captures raw network packets using Scapy, converts them into behavioral features, and passes them to unsupervised models.",
+        "Trained the system on baseline network traffic to identify subtle zero-day anomalies and multi-stage attack patterns that traditional signature-based rules miss.",
+        "Streamed real-time JSON alert logs directly into SIEM workflows, cutting down false positives and enabling immediate incident response by 60%."
+      ],
+      tech: ["Python", "Scikit-learn", "Scapy", "Networking"],
+      github: "https://github.com/Rishikaaz"
+    },
+    {
+      title: "Wi-Fi Network Scanner & Dashboard",
+      desc: [
+        "Developed a cross-platform (Windows & Linux) web application for scanning nearby Wi-Fi networks, analyzing signal strength, SSID parameters, and security protocols.",
+        "Integrated native netsh/nmcli system utilities with a Python Flask backend to stream real-time network telemetry, ping latency, and bandwidth performance."
+      ],
+      tech: ["Python", "Flask", "JavaScript", "HTML/CSS", "Linux", "Networking"],
       github: "https://github.com/Rishikaaz/Wifi-Network-Scanner"
     }
   ];
@@ -60,7 +79,15 @@ const Projects = () => {
                 </div>
                 <h3 className="project-title">{project.title}</h3>
                 <div className="project-description">
-                  <p>{project.desc}</p>
+                  {Array.isArray(project.desc) ? (
+                    <ul className="project-bullets">
+                      {project.desc.map((bullet, k) => (
+                        <li key={k}>{bullet}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p>{project.desc}</p>
+                  )}
                 </div>
               </header>
               <footer>
@@ -126,6 +153,13 @@ const Projects = () => {
           align-items: center;
           color: var(--light-slate);
         }
+        .project-date {
+          font-family: var(--font-mono);
+          font-size: var(--fz-xs);
+          color: var(--accent);
+          opacity: 0.85;
+          margin-right: 12px;
+        }
         .project-links a {
           padding: 10px;
         }
@@ -139,7 +173,24 @@ const Projects = () => {
         }
         .project-description {
           color: var(--light-slate);
-          font-size: var(--fz-lg);
+          font-size: var(--fz-md);
+        }
+        .project-bullets {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        .project-bullets li {
+          position: relative;
+          padding-left: 20px;
+          margin-bottom: 8px;
+          line-height: 1.5;
+        }
+        .project-bullets li:before {
+          content: "▹";
+          position: absolute;
+          left: 0;
+          color: var(--accent);
         }
         .project-tech-list {
           display: flex;

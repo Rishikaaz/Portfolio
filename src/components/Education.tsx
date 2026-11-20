@@ -1,26 +1,13 @@
-"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
 
 const Education = () => {
   const education = [
     {
-      title: "B.Tech in Computer Science and Engineering",
-      company: "Vellore Institute of Technology, Bhopal",
-      date: "2023 – ongoing",
-      desc: ["CGPA: 8.84/10"]
-    },
-    {
-      title: "Senior Secondary (XII), ICSE",
-      company: "St. Xavier’s Convent School, Lucknow",
-      date: "2022",
-      desc: ["Percentage: 78%"]
-    },
-    {
-      title: "High School (X), CBSE",
-      company: "St. Xavier’s Senior Secondary School, Gonda",
-      date: "2020",
-      desc: ["Percentage: 91.4%"]
+      title: "B.Tech in Computer Science (Specialization in Cyber Security)",
+      company: "Vellore Institute of Technology",
+      date: "2023 – 2027",
+      desc: ["CGPA: 8.84/10", "Bhopal, Madhya Pradesh"]
     }
   ];
 
@@ -70,20 +57,10 @@ const Education = () => {
 
       <style jsx>{`
                 .education-grid {
-                    display: grid;
-                    grid-template-columns: repeat(3, 1fr);
-                    gap: 35px;
+                    display: max-content;
+                    width: 100%;
+                    max-width: 800px;
                     margin-top: 50px;
-                }
-                @media (max-width: 1080px) {
-                    .education-grid {
-                        grid-template-columns: repeat(2, 1fr);
-                    }
-                }
-                @media (max-width: 768px) {
-                    .education-grid {
-                        grid-template-columns: 1fr;
-                    }
                 }
                 .education-card-wrapper {
                     height: 100%;

@@ -1,6 +1,5 @@
-"use client";
 import React from 'react';
-import { Shield, Code, Microscope, Cloud } from 'lucide-react';
+import { Shield, Code, Cloud, Terminal, Cpu, Layers } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Skills = () => {
@@ -8,22 +7,32 @@ const Skills = () => {
     {
       title: "Languages",
       icon: <Code size={20} />,
-      skills: ["C++", "Bash Scripting", "C", "C#", "Python", "SQL"]
+      skills: ["C++", "Python", "JavaScript", "SQL", "Bash Scripting", "HTML5", "CSS3"]
     },
     {
-      title: "Security Tools",
-      icon: <Shield size={20} />,
-      skills: ["BurpSuite", "Wireshark", "Nmap", "Metasploit", "Nessus", "Kali", "Hashcat", "Splunk", "Ghidra"]
+      title: "Full-Stack Development",
+      icon: <Layers size={20} />,
+      skills: ["React.js", "Node.js", "Express.js", "MongoDB", "RESTful APIs", "Tailwind CSS", "WebSockets", "Responsive UI Design"]
     },
     {
-      title: "Cloud & Tech",
+      title: "Tools & Frameworks",
+      icon: <Terminal size={20} />,
+      skills: ["Docker", "Git", "GitHub", "BurpSuite", "Wireshark", "Nmap", "Metasploit", "Nessus", "Splunk", "Ghidra", "Scapy", "Kali Linux"]
+    },
+    {
+      title: "Cloud & Infrastructure",
       icon: <Cloud size={20} />,
-      skills: ["AWS (EC2, Lambda, S3)", "Blockchain", "Linux", "Docker", "ELK Stack"]
+      skills: ["AWS (EC2, S3, IAM, VPC)", "Docker", "Linux", "ELK Stack", "Containerization", "Distributed Systems"]
     },
     {
-      title: "Specialized",
-      icon: <Microscope size={20} />,
-      skills: ["Reverse Engineering", "Malware Analysis", "Computer Networks", "OWASP", "OSI Model"]
+      title: "Core Concepts & Databases",
+      icon: <Cpu size={20} />,
+      skills: ["Data Structures & Algorithms (DSA)", "Object-Oriented Programming (OOPs)", "Operating Systems (OS)", "SQLite", "MySQL", "TCP/IP & Socket Programming", "Secure Coding", "System Optimization"]
+    },
+    {
+      title: "Security & Ethical Hacking",
+      icon: <Shield size={20} />,
+      skills: ["Computer Networking", "Vulnerability Assessment & Penetration Testing (VAPT)", "Reverse Engineering", "Malware Analysis", "Threat Detection", "Web Security", "OWASP Top 10"]
     }
   ];
 

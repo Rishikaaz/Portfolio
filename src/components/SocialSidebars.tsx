@@ -1,6 +1,5 @@
-"use client";
 import React from 'react';
-import { Github, Linkedin, Instagram } from 'lucide-react';
+import { Github, Linkedin, Code2, Shield, Instagram } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const SocialSidebars = () => {
@@ -19,8 +18,18 @@ const SocialSidebars = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/in/rishika-patel-854ba5289" target="_blank" rel="noreferrer" aria-label="Linkedin">
+                        <a href="https://www.linkedin.com/in/rishika-patel-854ba5289/" target="_blank" rel="noreferrer" aria-label="Linkedin">
                             <Linkedin size={20} />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://leetcode.com/rishikaaz19" target="_blank" rel="noreferrer" aria-label="LeetCode">
+                            <Code2 size={20} />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://tryhackme.com/p/Rishikaaz19" target="_blank" rel="noreferrer" aria-label="TryHackMe">
+                            <Shield size={20} />
                         </a>
                     </li>
                     <li>

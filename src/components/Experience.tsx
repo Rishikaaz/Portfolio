@@ -1,4 +1,3 @@
-"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -6,19 +5,30 @@ const Experience = () => {
 
   const experience = [
     {
-      title: "Cyber Security and Ethical Hacking Intern",
-      company: "Tamizhan Skills",
-      date: "Jun – Jul 2025 (Remote)",
+      title: "Software Engineering Intern",
+      company: "Skyy Tech LLC",
+      date: "Nov 2026 – Present | New York, US - Remote",
       desc: [
-        "Applied practical ethical hacking techniques to simulate real-world attacks and recommend remediation strategies."
+        "Contributing directly to SkyyLearn and other innovative products under development as part of collaborative product teams.",
+        "Working with engineering teams on real-world technical challenges involving modern technologies, AI integrations, and product development.",
+        "Participating in technical discussions, code reviews, standups, and product demonstrations."
       ]
     },
     {
-      title: "Green Skills with AI Technologies Intern",
-      company: "Edunet Foundation",
-      date: "Jun – Jul 2025 (Remote)",
+      title: "Security Researcher",
+      company: "Open Bug Bounty (Freelance)",
+      date: "Aug 2026 – Present | Remote",
       desc: [
-        "Evaluated AI-driven solutions for optimizing environmental data analysis and reporting."
+        "Identified and responsibly disclosed web application security vulnerabilities including Cross-Site Scripting (XSS).",
+        "Awarded the Fastest Fix Badge on Open Bug Bounty after vendor remediation within 24 hours."
+      ]
+    },
+    {
+      title: "Cyber Security Intern",
+      company: "Tamizhan Skills",
+      date: "Jun 2025 – Jul 2025 | Remote",
+      desc: [
+        "Programmed 6+ proof-of-concept Python security tools, including a custom multi-port socket scanner, file-encryption utilities and keyloggers."
       ]
     }
   ];

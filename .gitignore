@@ -12,6 +12,7 @@
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
@@ -27,3 +28,6 @@ ts-debug.log*
 
 # vercel
 .vercel
+
+# Exclude non-cybersecurity resume file from Git uploads
+Rishika -Patel - Resume.pdf
