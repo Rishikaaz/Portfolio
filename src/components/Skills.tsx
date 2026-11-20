@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Code, Cloud, Network, Terminal, Cpu } from 'lucide-react';
+import { Shield, Code, Cloud, Terminal, Cpu, Layers } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Skills = () => {
@@ -7,7 +7,12 @@ const Skills = () => {
     {
       title: "Languages",
       icon: <Code size={20} />,
-      skills: ["C++", "Python", "SQL", "Bash Scripting", "JavaScript", "HTML", "CSS"]
+      skills: ["C++", "Python", "JavaScript", "SQL", "Bash Scripting", "HTML5", "CSS3"]
+    },
+    {
+      title: "Full-Stack Development",
+      icon: <Layers size={20} />,
+      skills: ["React.js", "Node.js", "Express.js", "MongoDB", "RESTful APIs", "Tailwind CSS", "WebSockets", "Responsive UI Design"]
     },
     {
       title: "Tools & Frameworks",
@@ -17,12 +22,12 @@ const Skills = () => {
     {
       title: "Cloud & Infrastructure",
       icon: <Cloud size={20} />,
-      skills: ["AWS (EC2, S3, IAM, VPC)", "ELK Stack", "CI/CD Fundamentals", "Containerization"]
+      skills: ["AWS (EC2, S3, IAM, VPC)", "Docker", "Linux", "ELK Stack", "Containerization", "Distributed Systems"]
     },
     {
-      title: "Core Concepts & Networking",
+      title: "Core Concepts & Databases",
       icon: <Cpu size={20} />,
-      skills: ["Data Structures & Algorithms (DSA)", "Object-Oriented Programming (OOPs)", "Operating System (OS)", "TCP/IP", "Socket Programming", "Network Protocols", "Secure Coding", "System Optimization"]
+      skills: ["Data Structures & Algorithms (DSA)", "Object-Oriented Programming (OOPs)", "Operating Systems (OS)", "SQLite", "MySQL", "TCP/IP & Socket Programming", "Secure Coding", "System Optimization"]
     },
     {
       title: "Security & Ethical Hacking",
